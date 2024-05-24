@@ -1,0 +1,7 @@
+#Ignore python cahe files
+__pycache__/
+*.py[cod]
+
+#ignore jupyter checkpoints
+.ipynb_checkpoints
+.coverage
