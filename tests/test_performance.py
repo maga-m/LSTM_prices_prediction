@@ -21,6 +21,7 @@ def engine(model):
     return InferenceEngine(model)
 
 def test_model_performance(engine):
+    #testing model to work fast
     df = load_data(APP_DIR /'data/AAPL.csv')
     raw_data = df['Open'].values[:200]  # Sample raw data
     start_time = time.time()
@@ -31,7 +32,8 @@ def test_model_performance(engine):
     assert len(predictions) == len(raw_data) - engine.model.lookback + 1, "Number of predictions should match input data length minus lookback."
 
 
-def test_model_performance(engine):
+def test_model_performance_acc(engine):
+    #testing model accuracy
     df = load_data(APP_DIR / 'data/AAPL.csv')
     raw_data = df['Open'].values[:200]  # Sample raw data
     predictions = engine.run(raw_data)

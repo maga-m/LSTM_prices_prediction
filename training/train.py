@@ -157,7 +157,7 @@ def main():
     plt.ylabel('AAPLE Stock Price')
     plt.legend()
     #saving training predictions figure
-    with open(APP_DIR/'training/train_pred_1.pkl','wb') as f:
+    with open(APP_DIR/'training/train_pred.pkl','wb') as f:
         pickle.dump(figure, f)
 
     figure, axes = plt.subplots(figsize=(15, 9))
@@ -170,7 +170,7 @@ def main():
     plt.ylabel('AAPLE Stock Price')
     plt.legend()
     #saving test predictions figure
-    with open(APP_DIR/'training/test_pred_1.pkl','wb') as f:
+    with open(APP_DIR/'training/test_pred.pkl','wb') as f:
         pickle.dump(figure, f)
 
     
